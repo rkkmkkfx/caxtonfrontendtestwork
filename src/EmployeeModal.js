@@ -6,7 +6,8 @@ class EmployeeModal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: false
+      showModal: false,
+      departments: []
     }
   }
 
@@ -27,8 +28,16 @@ class EmployeeModal extends Component {
     this.close();
   }
 
+  componentDidMount() {
+    this.getDepartmentsName()
+      .then(data => {
+        this.setState({departments: data});
+      })
+  }
+
   render() {
-    const { id, firstName, lastName, departamentId } = this.props.data;
+    const { id, firstName, lastName, departmentId } = this.props.data;
+    const deps = this.state.departments.map(item => <option key={item.id} value={item.id}>{item.name}</option>);
 
     return (
       <div>
@@ -62,6 +71,17 @@ class EmployeeModal extends Component {
                   <FormControl type="text" placeholder="Last Name" defaultValue={lastName} onChange={this.handleChange.bind(this)} />
                 </Col>
               </FormGroup>
+
+              <FormGroup controlId="departmentId">
+                <Col componentClass={ControlLabel} sm={2}>
+                  Department
+                </Col>
+                <Col sm={10}>
+                  <FormControl componentClass="select" placeholder="select" defaultValue={departmentId} onChange={this.handleChange.bind(this)}>
+                    {deps}
+                  </FormControl>
+                </Col>
+              </FormGroup>
             </Form>
           </Modal.Body>
           <Modal.Footer>
@@ -71,6 +91,12 @@ class EmployeeModal extends Component {
         </Modal>
       </div>
     );
+  }
+
+  getDepartmentsName() {
+    return fetch('/departments', {accept: 'application/json'})
+      .then(res => res.json())
+      .then(data => {return data});
   }
 }
 

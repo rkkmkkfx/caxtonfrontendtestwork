@@ -12,9 +12,11 @@
   "employees": [
     {
       "id": 1,
-      "firstName": "Sergei",
-      "lastName": "Sergeev",
-      "departmentId": 1
+      "firstName": "Petr",
+      "lastName": "Petrov",
+      "departmentId": "1",
+      "departmentName": "Second",
+      "depName": "2"
     },
     {
       "id": 2,

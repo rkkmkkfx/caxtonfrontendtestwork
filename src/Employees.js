@@ -50,7 +50,6 @@ class Employees extends Component {
 
   saveData(id) {
     const data = this.state.data.find(item => item.id === id);
-    console.log(id, data);
     fetch('/employees/'+id, {
       method: 'PUT',
       headers: {

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import {NavLink} from 'react-router-dom';
+import {LinkContainer} from 'react-router-bootstrap';
+
+
+import { Nav, NavItem } from 'react-bootstrap';
 
 import './Sidebar.css';
 
@@ -7,18 +10,19 @@ class Sidebar extends Component {
   render() {
     return(
       <aside className="sidebar content-box">
-        <ul className="nav">
-          <li className="current">
-            <NavLink to="/departaments" >
-              <i className="glyphicon glyphicon-home"/> Departments
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/employees">
+        <Nav>
+            <LinkContainer to="/departaments" activeClassName="current">
+              <NavItem>
+                <i className="glyphicon glyphicon-home"/> Departments
+              </NavItem>
+            </LinkContainer>
+          <LinkContainer to="/employees" activeClassName="current">
+            <NavItem>
               <i className="glyphicon glyphicon-list"/> Employees
-            </NavLink>
-          </li>
-        </ul>
+            </NavItem>
+          </LinkContainer>
+
+        </Nav>
       </aside>
     )
   }
