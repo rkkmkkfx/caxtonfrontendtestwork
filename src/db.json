@@ -1,0 +1,40 @@
+{
+  "departments": [
+    {
+      "id": 1,
+      "name": "First"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "firstName": "Petr",
+      "lastName": "Petrov",
+      "departmentId": 1
+    },
+    {
+      "id": 2,
+      "firstName": "Ivan",
+      "lastName": "Ivanov",
+      "departmentId": 1
+    },
+    {
+      "id": 3,
+      "firstName": "Ivan",
+      "lastName": "Ivanov",
+      "departmentId": 1
+    },
+    {
+      "id": 4,
+      "firstName": "Ivan",
+      "lastName": "Ivanov",
+      "departmentId": 1
+    },
+    {
+      "id": 5,
+      "firstName": "Ivan",
+      "lastName": "Ivanov",
+      "departmentId": 1
+    }
+  ]
+}
