@@ -25,7 +25,7 @@ class Department extends Component {
             <form onSubmit={this.update.bind(this)}>
               <Col xs={12}>
                 <FormGroup controlId="name">
-                  <FormControl className="h2 text-center" type="text" placeholder="First Name" defaultValue={name} onChange={this.handleChange.bind(this)}/>
+                  <FormControl className="h2 text-center" type="text" placeholder="Department Name" defaultValue={name} onChange={this.handleChange.bind(this)}/>
                 </FormGroup>
               </Col>
               <Button type="submit" block>Save</Button>

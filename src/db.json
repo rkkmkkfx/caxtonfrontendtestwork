@@ -2,19 +2,20 @@
   "departments": [
     {
       "id": 1,
-      "name": "FrontEnd"
+      "name": "Front End Developers"
     },
     {
       "id": 2,
-      "name": "BackEnd"
+      "name": "Back End Developers"
     }
   ],
   "employees": [
     {
       "id": 1,
-      "firstName": "1",
-      "lastName": "2",
-      "departmentId": 2
+      "firstName": "Sergei",
+      "lastName": "Sergeev",
+      "departmentId": 2,
+      "departmentName": "Back End Developers"
     },
     {
       "id": 2,
