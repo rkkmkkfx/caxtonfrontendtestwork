@@ -27,13 +27,26 @@ class Employees extends Component {
     this.getData();
   }
 
+  getDepartmentsName(item) {
+    return fetch('/departments/' + item.departmentId, {accept: 'application/json'})
+      .then(res => res.json())
+      .then(data => {
+        item.departmentName = data.name
+        return item;
+      });
+  }
+
   getData() {
     fetch('/employees', {accept: 'application/json'})
       .then(res => res.json())
-      .then(result => {
-        this.setState({data: result});
+      .then(data => {
+        const getDeps = Promise.all(
+          data.map(item => this.getDepartmentsName(item))
+        );
+        getDeps.then(result => this.setState({data: result}));
       });
   }
+
 
   saveData(id) {
     const data = this.state.data.find(item => item.id === id);

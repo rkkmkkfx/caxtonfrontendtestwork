@@ -3,20 +3,24 @@
     {
       "id": 1,
       "name": "First"
+    },
+    {
+      "id": 2,
+      "name": "Second"
     }
   ],
   "employees": [
     {
       "id": 1,
-      "firstName": "Petr",
-      "lastName": "Petrov",
+      "firstName": "Sergei",
+      "lastName": "Sergeev",
       "departmentId": 1
     },
     {
       "id": 2,
       "firstName": "Ivan",
       "lastName": "Ivanov",
-      "departmentId": 1
+      "departmentId": 2
     },
     {
       "id": 3,
@@ -34,7 +38,7 @@
       "id": 5,
       "firstName": "Ivan",
       "lastName": "Ivanov",
-      "departmentId": 1
+      "departmentId": 2
     }
   ]
 }
