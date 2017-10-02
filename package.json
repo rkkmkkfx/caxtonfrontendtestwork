@@ -15,7 +15,7 @@
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "client": "react-scripts start",
-    "server": "json-server --watch src/db.json --port 3004",
+    "server": "node src/server",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

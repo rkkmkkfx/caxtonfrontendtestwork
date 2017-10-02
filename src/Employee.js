@@ -17,7 +17,7 @@ class Employee extends Component {
       <Col xs={ 12 } md={ 4 }>
         <Panel footer={ panelFooter }>
           <span><b>First Name:&nbsp;</b>{ firstName }</span><br/>
-          <span><b>Last Name:&nbsp;</b>{ lastName }</span>
+          <span><b>Last Name:&nbsp;</b>{ lastName }</span><br/>
           <span><b>Departament:&nbsp;</b>{ this.props.data.departmentName }</span>
         </Panel>
       </Col>
