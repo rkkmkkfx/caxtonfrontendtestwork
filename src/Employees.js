@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import Employee from './Employee';
 
+import {Row} from 'react-bootstrap';
+
 import './Sidebar.css';
 
 class Employees extends Component {
@@ -16,7 +18,7 @@ class Employees extends Component {
     if (data.length) {
       const emps = data.map(item => <Employee data={item} key={item.id} update={this.saveData.bind(this)}/>);
       return(
-        <div>{emps}</div>
+        <Row>{emps}</Row>
       )
     } else {
       return <span>Loading...</span>
